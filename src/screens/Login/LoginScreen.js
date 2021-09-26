@@ -7,10 +7,11 @@ import translate from '../../utils/translate';
 import styles from './styles';
 import {Button} from 'react-native-elements';
 import TextBottom from '../../components/Text/TextBottom';
+import {ForgotPassword, Home, Register} from '../../utils/BaseValues';
 
 const logo = require('../../assets/images/logo.jpeg');
 
-const LoginScreen = () => {
+const LoginScreen = ({navigation}) => {
   const [inputText, setInputText] = useState(null);
 
   const _handleChangeText = text => {
@@ -44,18 +45,19 @@ const LoginScreen = () => {
             titleStyle={styles.rightText}
             type="clear"
             title={translate.forgotPassword}
+            onPress={() => navigation.navigate(ForgotPassword)}
           />
           <ButtonCustom
-            _onPress={() => console.log('login')}
+            _onPress={() => navigation.navigate(Home)}
             title={translate.login}
-          />
-          <TextBottom
-            title={translate.notHaveAccount}
-            actionTitle={translate.registerNow}
-            openScreen={() => console.log('register')}
           />
         </View>
       </View>
+      <TextBottom
+        title={translate.notHaveAccount}
+        actionTitle={translate.registerNow}
+        openScreen={() => navigation.navigate(Register)}
+      />
     </View>
   );
 };

@@ -1,6 +1,6 @@
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
 import {ThemeProvider} from 'react-native-elements';
 import {RootNavigator} from './routes/RootNavigator';
 

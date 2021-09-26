@@ -1,10 +1,10 @@
 import {StyleSheet} from 'react-native';
-import Colors from '../../theme/Colors';
-import FontSize from '../../theme/FontSize';
 import {
   widthPercentageToDP as wd,
   heightPercentageToDP as hd,
 } from 'react-native-responsive-screen';
+import Colors from '../../theme/Colors';
+import FontSize from '../../theme/FontSize';
 import space from '../../utils/spacing';
 
 const styles = StyleSheet.create({
@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
     width: wd('42%'),
     height: wd('42%'),
   },
-  logoContainer: {paddingVertical: hd('8%'), alignItems: 'center'},
-  formLoginContainer: {
+  logoContainer: {paddingVertical: hd('2.5%'), alignItems: 'center'},
+  formRegisterContainer: {
     backgroundColor: Colors.white,
     flex: 1,
     borderTopLeftRadius: wd('6%'),
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     fontFamily: 'SFCompactText-Semibold',
   },
   subContainer: {
-    marginTop: space.hd20,
+    marginTop: space.hd10,
   },
   inputText: {
     borderRadius: space.borderBtn,
@@ -44,12 +44,19 @@ const styles = StyleSheet.create({
     fontSize: FontSize.font12,
     marginTop: space.hd30,
   },
+  logoOTPConfirm: {paddingVertical: hd('13%'), alignItems: 'center'},
+  msgOTP: {
+    marginTop: hd('1.5%'),
+    fontFamily: 'SFProText-Light',
+    fontSize: FontSize.font12,
+    color: Colors.textColor,
+  },
   rightText: {
     fontFamily: 'SFProText-Semibold',
     fontSize: FontSize.font14,
     color: Colors.blueTextBg,
     textAlign: 'right',
-    marginTop: space.hd20,
+    marginTop: space.hd10,
     flex: 1,
   },
 });

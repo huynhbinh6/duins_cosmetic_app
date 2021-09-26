@@ -9,6 +9,7 @@ const space = {
   hd20: hd('2%'),
   inputVer: hd('2%'),
   hd40: hd('4%'),
+  hd45: hd('4.5%'),
   hd55: hd('6%'),
   wd20: wd('3%'),
   inputHor: wd('4%'),

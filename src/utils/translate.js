@@ -13,8 +13,15 @@ const translate = {
   haveAccount: 'Bạn đã có tài khoản?',
   inputFormForgotPw:
     'Nhập số điện thoại vào ô bên dưới để để nhận hướng dẫn thiết lập mật khẩu mới',
+  confirmOTP: 'Xác nhận OTP',
+  OTPMsg:
+    'OTP đã được gửi vào số điện thoại đăng ký, bạn vui lòng kiểm tra và nhập mã vào bên dưới.',
+  inputOTP: 'Nhập mã OTP',
+  resendOTP: 'Gửi lại OTP',
+  confirmRegister: 'Xác nhận đăng ký',
   resetPw: 'Khôi phục mật khẩu',
   rememberPw: 'Bạn đã nhớ ra mật khẩu?',
+  headerTitle: 'Duins Cosmetic',
 };
 
 export default translate;
