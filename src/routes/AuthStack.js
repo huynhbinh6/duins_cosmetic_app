@@ -4,6 +4,7 @@ import {
   ForgotPassword,
   Home,
   Login,
+  Main,
   OPTConfirm,
   Register,
   Splash,
@@ -14,6 +15,7 @@ import RegisterScreen from '../screens/Register/RegisterScreen';
 import OTPConfirmScreen from '../screens/Register/OTPConfirmScreen';
 import ForgotPwScreen from '../screens/ForgotPassword/ForgotPwScreen';
 import HomeScreen from '../screens/Home/HomeScreen';
+import {HomeStack} from './HomeStack';
 
 const Auth = createNativeStackNavigator();
 
@@ -29,7 +31,7 @@ export function AuthStack() {
       <Auth.Screen name={Register} component={RegisterScreen} />
       <Auth.Screen name={OPTConfirm} component={OTPConfirmScreen} />
       <Auth.Screen name={ForgotPassword} component={ForgotPwScreen} />
-      <Auth.Screen name={Home} component={HomeScreen} />
+      <Auth.Screen name={Main} component={HomeStack} />
     </Auth.Navigator>
   );
 }

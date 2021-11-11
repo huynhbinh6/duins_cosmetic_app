@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import FastImage from 'react-native-fast-image';
 import translate from '../../utils/translate';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -9,14 +9,16 @@ import space from '../../utils/spacing';
 
 const userLogo = require('../../assets/images/logo.jpeg');
 
-const Header = () => {
+const Header = ({navigation}) => {
   return (
     <View style={styles.headerContainer}>
-      <FastImage
-        source={userLogo}
-        resizeMode={'contain'}
-        style={styles.logoStyle}
-      />
+      <TouchableOpacity>
+        <FastImage
+          source={userLogo}
+          resizeMode={'contain'}
+          style={styles.logoStyle}
+        />
+      </TouchableOpacity>
       <Text style={styles.headerText}>{translate.headerTitle}</Text>
       <View>
         <Icon name="ios-cart-outline" size={space.hd45} />

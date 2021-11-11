@@ -5,6 +5,7 @@ import {
 } from 'react-native-responsive-screen';
 import Colors from '../../theme/Colors';
 import FontSize from '../../theme/FontSize';
+import {SFProTextLight, SFProTextSemibold} from '../../utils/BaseValues';
 import space from '../../utils/spacing';
 
 const styles = StyleSheet.create({
@@ -47,12 +48,12 @@ const styles = StyleSheet.create({
   logoOTPConfirm: {paddingVertical: hd('13%'), alignItems: 'center'},
   msgOTP: {
     marginTop: hd('1.5%'),
-    fontFamily: 'SFProText-Light',
+    fontFamily: SFProTextLight,
     fontSize: FontSize.font12,
     color: Colors.textColor,
   },
   rightText: {
-    fontFamily: 'SFProText-Semibold',
+    fontFamily: SFProTextSemibold,
     fontSize: FontSize.font14,
     color: Colors.blueTextBg,
     textAlign: 'right',

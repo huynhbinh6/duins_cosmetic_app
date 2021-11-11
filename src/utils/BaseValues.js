@@ -6,6 +6,10 @@ export const OPTConfirm = 'OTPConfirm';
 export const ForgotPassword = 'ForgotPassword';
 export const Home = 'Home';
 export const Main = 'Main';
-export const Mask = 'Mask';
-export const Cleanser = 'Cleanser';
-export const Sunscreen = 'Sunscreen';
+
+//Fonts
+export const DancingScriptBold = 'DancingScript-Bold';
+export const SFProTextMedium = 'SFProText-Medium';
+export const SFProTextSemibold = 'SFProText-Semibold';
+export const SFProTextLight = 'SFProText-Light';
+export const SFCompactTextSemibold = 'SFCompactText-Semibold';

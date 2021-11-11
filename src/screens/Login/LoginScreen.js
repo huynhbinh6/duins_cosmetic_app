@@ -7,7 +7,7 @@ import translate from '../../utils/translate';
 import styles from './styles';
 import {Button} from 'react-native-elements';
 import TextBottom from '../../components/Text/TextBottom';
-import {ForgotPassword, Home, Register} from '../../utils/BaseValues';
+import {ForgotPassword, Home, Main, Register} from '../../utils/BaseValues';
 
 const logo = require('../../assets/images/logo.jpeg');
 
@@ -48,7 +48,7 @@ const LoginScreen = ({navigation}) => {
             onPress={() => navigation.navigate(ForgotPassword)}
           />
           <ButtonCustom
-            _onPress={() => navigation.navigate(Home)}
+            _onPress={() => navigation.navigate(Main)}
             title={translate.login}
           />
         </View>

@@ -1,41 +1,72 @@
 import React from 'react';
-import {View, Text, StatusBar} from 'react-native';
-import translate from '../../utils/translate';
+import {Text, ScrollView, TouchableOpacity, View, FlatList} from 'react-native';
 import styles from './styles';
-import Icon from 'react-native-vector-icons/Ionicons';
-import {Badge} from 'react-native-elements';
-import FastImage from 'react-native-fast-image';
-import Header from '../../components/Header/Header';
+import Colors from '../../theme/Colors';
+import space from '../../utils/spacing';
+import {SFProTextMedium} from '../../utils/BaseValues';
+import FontSize from '../../theme/FontSize';
 
-const userLogo = require('../../assets/images/logo.jpeg');
+const data = [
+  {
+    id: 1,
+    name: 'Sữa rửa mặt',
+  },
+  {
+    id: 2,
+    name: 'Kem chống nắng',
+  },
+  {
+    id: 3,
+    name: 'Mặt nạ',
+  },
+  {
+    id: 4,
+    name: 'Nước hoa',
+  },
+  {
+    id: 5,
+    name: 'Bông tẩy trang',
+  },
+];
 
 const HomeScreen = () => {
+  const _renderItem = ({item, index}) => {
+    return (
+      <TouchableOpacity key={item.id} style={styles.item}>
+        <Text style={{fontFamily: SFProTextMedium}}>{item?.name}</Text>
+      </TouchableOpacity>
+    );
+  };
+
   return (
-    <View style={styles.container}>
-      <Header />
-      {/* <Header
-        centerComponent={{
-          text: translate.headerTitle,
-          style: styles.headerText,
-        }}
-        rightComponent={
-          <View>
-            <Icon name="ios-cart-outline" size={35} />
-            <Badge
-              status="primary"
-              value="3"
-              containerStyle={{position: 'absolute', top: -3, right: -4}}
-            />
-          </View>
-        }
-        leftComponent={
-          <FastImage
-            source={userLogo}
-            style={{width: 35, height: 35, borderRadius: 35 / 2}}
-          />
-        }
-      /> */}
-    </View>
+    <ScrollView style={styles.container}>
+      <Text
+        style={{
+          marginTop: space.hd10,
+          paddingHorizontal: space.hd10,
+          fontFamily: SFProTextMedium,
+          fontSize: FontSize.font16,
+        }}>
+        {'Danh mục'}
+      </Text>
+      <FlatList
+        data={data}
+        keyExtractor={item => item.id}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        extraData={data}
+        renderItem={(item, index) => _renderItem(item, index)}
+      />
+      <Text
+        style={{
+          marginTop: space.hd10,
+          paddingHorizontal: space.hd10,
+          fontFamily: SFProTextMedium,
+          fontSize: FontSize.font16,
+        }}>
+        {'Hàng bán chạy'}
+      </Text>
+    </ScrollView>
   );
 };
 

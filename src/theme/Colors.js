@@ -7,6 +7,8 @@ const Colors = {
   blueTextBg: '#007AFF',
   disableBtn: '#F1F6F7',
   textDisable: '#C7C7C7',
+  bgColor: '#E5E7E9',
+  shadowColor: '#626567',
 };
 
 export default Colors;
