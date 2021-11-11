@@ -43,7 +43,6 @@ const HomeScreen = () => {
       <Text
         style={{
           marginTop: space.hd10,
-          paddingHorizontal: space.hd10,
           fontFamily: SFProTextMedium,
           fontSize: FontSize.font16,
         }}>
@@ -60,7 +59,6 @@ const HomeScreen = () => {
       <Text
         style={{
           marginTop: space.hd10,
-          paddingHorizontal: space.hd10,
           fontFamily: SFProTextMedium,
           fontSize: FontSize.font16,
         }}>
